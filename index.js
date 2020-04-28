@@ -142,7 +142,7 @@ function parse (input) {
   }
 
   function multilinestring () {
-    if (!$(/^(multilinestring)/i)) return null;
+    if (!$(/^(multilinestring(\sz)?)/i)) return null;
     white();
     var c = multicoords();
     if (!c) return null;
@@ -178,7 +178,7 @@ function parse (input) {
   }
 
   function multipolygon () {
-    if (!$(/^(multipolygon)/i)) return null;
+    if (!$(/^(multipolygon(\sz)?)/i)) return null;
     white();
     var c = multicoords();
     if (!c) return null;
